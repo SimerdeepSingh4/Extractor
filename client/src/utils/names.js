@@ -1,7 +1,7 @@
 // Proper name handling helper for merged passport/insurance data
 // Returns cleaned firstName, lastName, and memberName fields.
 // `info` is an object that may contain firstName, givenNames, lastName, surname, memberName.
-export function applyProperNameHandling(info, docType) {
+export function applyProperNameHandling(info, _docType) {
   // Prefer explicit fields, fallback to generic ones
   let rawSurname = info.lastName || info.surname || "";
   let first = info.firstName || info.givenNames || "";
